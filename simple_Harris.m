@@ -7,7 +7,7 @@ close all;
 % 画像読み込み
 I=im2single(imread('cameraman.tif'));
 %I = im2single(rgb2gray(imread('checkerboard.png')));
-filtersize=5;  % パッチサイズ
+filtersize=6;  % パッチサイズ
 Th_c =  0.01;  % コーナーしきい値
 Th_e = -0.0004; % エッジしきい値
 k = 0.06;  % 
