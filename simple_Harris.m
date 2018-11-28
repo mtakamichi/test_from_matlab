@@ -10,7 +10,7 @@ I=im2single(imread('cameraman.tif'));
 filtersize=5;  % パッチサイズ
 Th_c =  0.01;  % コーナーしきい値
 Th_e = -0.0004; % エッジしきい値
-k = 0.04;  % 
+k = 0.05;  % 
 % パッチ内の重み（今回はすべて一様とするが，一般にはガウシアンフィルタの係数が使われる）
 filter2D = ones(filtersize, filtersize)/(filtersize^2);
 
@@ -37,4 +37,3 @@ I2(:,:,[2 3])=~(metricMatrix >  Th_c).*I2(:,:,[2 3]);
 I2(:,:,[1 3])=~(metricMatrix <  Th_e).*I2(:,:,[1 3]);
 % 表示
 imshow(I2)
-
